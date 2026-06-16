@@ -7,7 +7,7 @@ on:
       battle_count:
         description: 'Number of battle rooms to create and solve'
         required: true
-        default: '7'
+        default: '8'
         type: string
 
 
@@ -41,6 +41,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           CHORCHA_PHONE: ${{ secrets.CHORCHA_PHONE }}
           CHORCHA_PASS: ${{ secrets.CHORCHA_PASS }}
+          CHORCHA_NAME: ${{ secrets.CHORCHA_NAME }}
         run: |
           # Use manual input for count, fallback to 5
           COUNT="${{ github.event.inputs.battle_count }}"
