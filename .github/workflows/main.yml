@@ -7,7 +7,7 @@ on:
       battle_count:
         description: 'Number of battle rooms to create and solve'
         required: true
-        default: '8'
+        default: '7'
         type: string
 
 
@@ -36,7 +36,7 @@ jobs:
 
       - name: Run Battle Bot
         env:
-          COOKIE_JSON: ${{ secrets.COOKIE_JSON }}
+          COOKIE_JSON: ${{ secrets.CHORCHA_COOKIES }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           CHORCHA_PHONE: ${{ secrets.CHORCHA_PHONE }}
